@@ -9,6 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name="Title")
     content = models.TextField(verbose_name="Content")
     published_date = models.DateTimeField(verbose_name="Publish Date")
+    image = models.FileField(null=True, blank=True)
 
 
 

@@ -15,6 +15,7 @@ def home_view(request):
 def contact_view(request):
 
     if request.method == "POST":
+        
         contact_form = MessageForm(request.POST)
         print(request.POST)
         if contact_form.is_valid():
