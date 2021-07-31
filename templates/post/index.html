@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% block title %}Post-İndeks{% endblock%}
+
+
+{% block body %}
+
+
+    Burası Post-Index
+
+    {% for post in posts  %}
+    
+        {{post.id}}<br>
+        <a href="{{post.get_absolute_url}}">{{post.title}}<br></a>
+        {{post.content}}<br>
+        {{post.published_date}}<br>
+        <hr>
+    
+    
+    {% endfor %}
+
+
+
+{% endblock  %}
