@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'main',
     #Third Party Apps
     'crispy_forms',
+    'django_cleanup',
 
 
 ]

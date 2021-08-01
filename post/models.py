@@ -9,7 +9,8 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name="Title")
     content = models.TextField(verbose_name="Content")
     published_date = models.DateTimeField(verbose_name="Publish Date")
-    image = models.FileField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    slug = models.SlugField(unique=True)
 
 
 
@@ -23,3 +24,6 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse("post:detail", kwargs={"id": self.id})
     
+
+    class Meta:
+        ordering = ['-published_date', 'id']

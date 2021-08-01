@@ -8,7 +8,9 @@
 
         
     {{post.id}}<br>
-   <img src="{{post.image.url}}" >
+    {% if post.image %}
+        <img src="{{post.image.url}}" >
+    {% endif %}
     {{post.title}}<br>
     {{post.content}}<br>
     {{post.published_date}}<br>
