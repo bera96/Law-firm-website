@@ -15,9 +15,9 @@ def post_index(request):
 
 
 
-def post_detail(request,id):
+def post_detail(request,slug):
 
-    post = get_object_or_404(Post,id=id)
+    post = get_object_or_404(Post,slug=slug)
 
     context = {
         'post':post

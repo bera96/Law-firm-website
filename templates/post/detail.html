@@ -12,7 +12,7 @@
         <img src="{{post.image.url}}" >
     {% endif %}
     {{post.title}}<br>
-    {{post.content}}<br>
+    {{post.content|safe}}<br>
     {{post.published_date}}<br>
     <hr>
 
