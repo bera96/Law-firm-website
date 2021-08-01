@@ -33,3 +33,15 @@ def contact_view(request):
 
     return render(request, 'main/contactus.html',context ) 
 
+def questions_view(request):
+
+    return render(request, 'main/faqs.html' ) 
+
+
+def aboutus_view(request):
+
+    return render(request, 'main/aboutus.html' ) 
+
+def practice_areas_view(request):
+
+    return render(request, 'main/practiceareas.html' ) 
