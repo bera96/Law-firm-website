@@ -1,0 +1,170 @@
+{% extends 'partials/base.html' %}
+
+{% load static %}
+
+
+
+{% block body %}
+
+{% include 'partials/messages.html' %}
+
+<div id="main-page-container">
+
+    <div id="main-page-overlay">
+
+        {% include 'partials/header.html' %}
+
+
+        <div id="description-wrapper" data-content-field="description">
+            <p class="desc-bold"><strong>honest</strong></p>
+            <p class="desc-normal">treatment</p>
+            <p class="desc-bold"><strong>clear</strong></p>
+            <p class="desc-normal">advice</p>
+            <p class="desc-bold"><strong>smart</strong></p>
+            <p class="desc-normal">strategies</p>
+            <p class="desc-link">
+                <br>
+                <a href="">learn more</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<main id="page">
+
+    <div id="page-content">
+        <div id="certificates">
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/NJ-Super-Lawyers.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/tbls1-laborandemploymentlaw.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/Screen+Shot+2014-12-30+at+11.46.31+AM.png' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/TxBarCollegeLogo_png.png' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/85015509-cf5f-45e1-ab62-8d1d69162283.png' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/tx_dallas_employment-lawyers_2021.jpg' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/Screen+Shot+2021-02-24+at+2.05.38+PM.png' %}" alt="">
+                    
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/images.png' %}" alt="">
+                </a>
+            </div>
+            <div class="certificate">
+                <a href="">
+                    <img src="{% static 'img/Screen+Shot+2021-02-24+at+2.05.26+PM.png' %}" alt="">
+                    
+                </a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="page-content-middle">
+
+        <h1><strong>Sizin İçin Çalışacağız.</strong></h1>
+
+        <p>İstihdam yasaları karmaşıktır ve her gün değişmektedir.
+
+
+            <br>
+
+            İstihdam anlaşmazlıklarına açıklık, yön ve anlam katıyoruz.
+
+        </p>
+
+        <p>Bireyleri, çalışanları, yöneticileri ve girişimcileri savunuyoruz.</p>
+        <p>İşyerinde adil muameleyi güvence altına almak ve mahkeme salonunun içinde ve dışında sonuçlar almak için
+            çalışıyoruz.
+            <br>
+            İş sorunları yeterince streslidir. Rotanızda yardımcı olalım.
+        </p>
+
+    </div>
+
+    <div id="page-content-end">
+        <div id="page-content-end-items">
+            <div class="page-content-end-item">
+
+                <a href="">
+                    <img src="{% static 'img/image2.jpg' %}" alt="">
+                </a>
+
+                <h2>
+
+                    <a href="">hakkımızda</a>
+
+                </h2>
+
+                <p>Geçmişimiz, yöntemlerimiz ve problem çözme <br> yaklaşımımız hakkında bilgi edinin.</p>
+                <p><a href="">Daha Fazla Bilgi Edinin →</a></p>
+
+            </div>
+
+            <div class="page-content-end-item">
+
+                <a href="">
+                    <img src="{% static 'img/image3.jpg' %}" alt="">
+                </a>
+
+                <h2>
+
+                    <a href="">bizimle konuşun</a>
+
+                </h2>
+
+                <p>Danışmanlığınızı bugün çevrimiçi olarak planlayın. <br> Bir geri arama beklemenize veya uygun
+                    tarihleri öğrenmenize gerek yoktur.</p>
+                <p><a href="">Şimdi Planla →</a></p>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+    <div id="hr-cont">
+        <hr id="main-page-hr">
+    </div>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+{% endblock %}

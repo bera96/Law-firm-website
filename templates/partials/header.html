@@ -1,0 +1,31 @@
+{% load static %}
+
+ <header id="site-header">
+    <div id="site-logo">
+        <img src="{% static 'img/logo.png'%}" alt="">
+    </div>
+    <div id="site-list-container">
+        <div class="site-list-item">
+            <a href="{% url 'main:home' %}">ANASAYFA</a>
+        </div>
+        <div class="site-list-item">
+            <a href="{% url 'main:faqs' %}">S.S.S</a>
+        </div>
+        <div class="site-list-item">
+            <a href="{% url 'main:aboutus' %}">HAKKIMIZDA</a>
+        </div>
+        <div class="site-list-item">
+            <a href="">DANIŞMA</a>
+        </div>
+        <div class="site-list-item">
+            <a href="{% url 'main:practice_areas' %}">FAALİYET ALANLARI</a>
+        </div>
+        <div class="site-list-item">
+            <a href="{% url 'post:index' %}">BLOG</a>
+        </div>
+        <div class="site-list-item bordered">
+            <a href="{% url 'main:contact' %}">İLETİŞİM</a>
+        </div>
+    </div>
+
+</header>

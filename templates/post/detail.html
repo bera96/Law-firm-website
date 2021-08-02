@@ -1,0 +1,19 @@
+{% extends 'partials/base.html' %}
+{% block title %}Post-Detay{% endblock%}
+
+{% block body %}
+
+    {% include 'partials/header.html' %}
+    Burası Post-Detay
+
+        
+    {{post.id}}<br>
+   <img src="{{post.image.url}}" >
+    {{post.title}}<br>
+    {{post.content}}<br>
+    {{post.published_date}}<br>
+    <hr>
+
+
+
+{% endblock  %}
