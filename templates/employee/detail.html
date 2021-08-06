@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% block title %}Employee-Detay{% endblock%}
+
+{% block body %}
+
+    {% include 'partials/header.html' %}
+
+
+        
+
+    {% if employee.image %}
+        <img src="{{post.image.url}}" >
+    {% endif %}
+    {{employee.name + employee.surname }}<br>
+    {{employee.description|safe}}<br>
+    {{employee.faculty, employee.graduated_date}}<br>
+    <hr>
+
+    
+
+
+
+{% endblock  %}

@@ -5,9 +5,17 @@
 {% block body %}
 
     {% include 'partials/header.html' %}
-    Burası Post-Index
 
-    {% for post in posts  %}
+    <form class="navbar-form navbar-left" role="search" method="GET" action="">
+        <div class="input-group">
+            <input class="form-control" type="text" name="query" placeholder="Search on posts" value="{{ request.GET.query }}" >
+            <span class="input-group-btn">
+                <input class="btn btn-default" type="submit" value="Ara">
+            </span>
+        </div>
+    </form>
+
+    {% for post in page_obj  %}
     
         {{post.id}}<br>
         <a href="{{post.get_absolute_url}}">{{post.title|title}}<br></a>
@@ -15,9 +23,21 @@
         <a href="{{ post.get_absolute_url }}">read more</a>
         {{post.published_date}}<br>
         <hr>
+
+
     
     
     {% endfor %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.query %}&query={{ request.GET.query }}{% endif %}">Newer Posts</a>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% if request.GET.query %}&query={{ request.GET.query }}{% endif %}">Older Posts</a>
+            {% endif %}
+            </span>
+    </div>
 
 
 
