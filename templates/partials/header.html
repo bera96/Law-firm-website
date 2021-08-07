@@ -12,13 +12,28 @@
             <a href="{% url 'main:faqs' %}">S.S.S</a>
         </div>
         <div class="site-list-item">
-            <a href="{% url 'main:aboutus' %}">HAKKIMIZDA</a>
+            <a href="{% url 'main:aboutus' %}">HAKKIMIZDA
+                <ul>
+                    <a href="about.html"><li>Hakkımızda</li></a>
+                    {% for employee in context_employees %}
+                        <a href="{{employee.get_absolute_url}}"><li>{{employee.name|title}}</li><br></a>
+                    {% endfor %}
+                </ul>
+            </a>
+            
         </div>
         <div class="site-list-item">
             <a href="">DANIŞMA</a>
         </div>
         <div class="site-list-item">
-            <a href="{% url 'main:practice_areas' %}">FAALİYET ALANLARI</a>
+            <a href="{% url 'main:practice_areas' %}">FAALİYET ALANLARI
+                <ul>
+                    {% for area in context_practice_areas %}
+                        <a href=""><li>{{area.title|title}}</li><br></a>
+                    {% endfor %}
+                </ul>
+            
+            </a>
         </div>
         <div class="site-list-item">
             <a href="{% url 'post:index' %}">BLOG</a>

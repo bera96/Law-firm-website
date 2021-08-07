@@ -30,9 +30,18 @@ def post_index(request):
 def post_detail(request,slug):
 
     post = get_object_or_404(Post,slug=slug)
+    print(post.id)
+    older_post = Post.objects.filter(id=(post.id-1)) 
+    if older_post:
+        older_post = older_post[0]
+    newer_post = Post.objects.filter(id=(post.id+1))
+    if newer_post:
+        newer_post = newer_post[0]
 
     context = {
-        'post':post
+        'post':post,
+        'older_post':older_post,
+        'newer_post':newer_post
     }
     return render(request, 'post/detail.html',context)
 

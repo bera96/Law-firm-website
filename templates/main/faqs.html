@@ -1,13 +1,47 @@
 {% extends 'partials/base.html' %}
 
-{% load static %}
-
-
-
 {% block body %}
 
-{% include 'partials/header.html' %}
+    <div id="sss-container">
+            <div id="sss-overlay">
+                 {% include 'partials/header.html' %}
+                <div id="description-wrapper">
+                    <p class="desc-bold"><strong>S.S.S</strong></p>
+                </div>
+            </div>
+    </div>
 
-    <h2>Sıkça Sorulan Sorular</h2>
+    <main id="page">
+        <div class="page-content sss-page-content">
+            <div class="sss-search-container">
+                <p>
+                    <em>Her durum benzersizdir. Bunlar genel yanıtlardır ve gerçek, kişiselleştirilmiş yanıtların yerini
+                        almazlar.</em>
+                </p>
+                <div class="search">
 
+                    <input type="search" class="search-input" placeholder="Search" aria-label="search">
+                </div>
+            </div>
+                <div class="columns">
+                    <div class="column-left">
+                        {% for faq_odd in faqs_odd %}
+                        <div class="column-left-item">
+                            <b>{{ faq_odd.title}}</b>
+                            {{faq_odd.desc|safe}}
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="column-right">
+                            {% for faq_even in faqs_even %}
+                            <div class="column-right-item">
+                                <b>{{ faq_even.title}}</b>
+                            {{faq_even.desc|safe}}
+                            </div>
+                            {% endfor %}
+                    </div>
+                </div>
+        </div>
+    </main>
 {% endblock %}
