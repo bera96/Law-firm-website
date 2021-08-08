@@ -1,0 +1,360 @@
+/* Global Css */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: adobe-garamond-pro, serif;
+  
+    
+}
+::selection{
+    background-color: black;
+    color: #fff;
+}
+ol,ul {
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
+/* Landing Page Css */
+#main-page-container{
+    width: 100%;
+    height: 60rem;
+    background: url(../img/image.jpg) no-repeat;
+    background-size: cover;
+   
+    
+}
+
+#main-page-overlay{
+    width: 100%;
+    height: 60rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+}
+
+    /* Navbar */
+
+#site-header{
+    padding: 1rem 1rem;
+    align-items: center;
+    display: flex;
+}
+#site-logo{
+    width: 10rem;
+    height: 3rem;
+}
+#site-logo img{
+    object-fit: cover;
+    width: 100%;
+    height: 3rem;
+}
+#site-list-container{
+    align-items: center;
+    height: 2rem;
+    margin-left: auto;
+    display: flex;
+}
+.site-list-item{
+    margin-right: 2rem;
+    
+}
+.site-list-item a{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color:rgba(255,255,255,.9);
+    line-height: 1em;
+}
+.bordered{
+    line-height: 0;
+    padding: 0.6rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 300px;
+    
+}
+.bordered:hover{
+    
+    background-color: #fff;
+}
+.bordered:hover>a{
+    color: black !important;
+}
+.site-list-item a:hover{
+    color: white;
+}
+
+/* Landing Page Description */
+
+#description-wrapper{
+    width: 20rem;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+.desc-bold{
+    letter-spacing: 0.0588235em;
+    color: #fff;
+    font-weight: 700;
+    font-size: 68px;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+}
+.desc-normal{
+    
+
+    font-family: adobe-garamond-pro, serif;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 1.2rem;
+   
+   
+
+}
+.desc-link{
+    
+    margin-top: 4rem;
+}
+.desc-link a{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #36b3a8;
+    padding:0.85rem 1.7rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+.desc-link a:hover{
+    background:rgba(54, 179, 168,0.6)
+}
+
+/* Certificates */
+
+main{
+    width: 60%;
+    max-width: 1020px;
+    height: auto;
+    margin: 0 auto;
+}
+#page-content{
+    
+    width: auto;
+    
+    /* height: 20rem;
+    margin:0 auto; */
+    margin-top: 5rem;
+}
+#certificates{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.certificate{
+    margin:0.5rem 3rem;
+    
+    
+  
+    
+}
+
+/* Page Content Middle */
+
+#page-content-middle{
+    margin-top: 6rem;
+    width: auto;
+    text-align: center;
+}
+#page-content-middle h1{
+    font-family: adobe-garamond-pro, serif;
+    line-height: 1.2em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}
+#page-content-middle p{
+   font-family: adobe-garamond-pro, serif;
+   color: rgba(26, 26, 26, 0.7);
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 28.8px;
+
+    margin:1rem 0;
+}
+
+/* Page Content End */
+
+#page-content-end{
+   
+    margin-top: 8rem;
+    
+    
+}
+#page-content-end-items{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.page-content-end-item h2{
+    margin-top: 1.25rem;
+}
+.page-content-end-item h2 a{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #3d9991;
+    font-size: 22px;
+    line-height: 26.4px;
+
+}
+.page-content-end-item p{
+    margin-top: 1.25rem;
+    color: rgba(26, 26, 26, 0.7);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+
+}
+.page-content-end-item p  a{
+    color: #3d9991;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+
+}
+#main-page-hr{
+    background-color: #eee;
+    border: 0 none;
+    color: #1f1f1f;
+    height: 1px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Footer */
+
+#site-info{
+    background-color:#1f1f1f;
+    text-align: center;
+    height: 11rem;
+    
+}
+
+#site-info span{
+ 
+    text-transform: uppercase;
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 80.8px;
+    
+    
+}
+
+/* SSS Page Start */
+
+#sss-container{
+    width: 100%;
+    height: 32rem;
+    background: url(../img/sss-overlay.jpeg) no-repeat;
+    background-size: cover;
+     
+}
+#sss-overlay{
+    width: 100%;
+    height: 32rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* SSS Content */
+
+.sss-page-content{
+    text-align: center;
+}
+.sss-search-container p{
+    margin-top: 6rem;
+    line-height: 28.8px;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(26,26,26,.7);
+}
+
+.search-input{
+    padding: 1rem 3rem;
+    opacity: 0.7;
+    align-items: center;
+    border: 1px solid rgb(170, 170, 170);
+    background: url(../img/search-icon.png) no-repeat 15px ;
+    margin-top: 3rem;
+    width: 60rem;
+    height: 3.2rem;
+}
+.search-input:hover{
+  opacity: 1;
+}
+.search-input:active{
+    outline: rgb(16, 16, 16);
+}
+.search-input::placeholder{
+    font-size: 18px;
+    
+}
+.columns{
+    text-align: left;
+    
+    display: flex;
+    margin-bottom: 6rem;
+}
+
+.columns h2{
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-transform: uppercase;
+}
+.columns b{
+    color: rgba(26,26,26,0.7);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.columns p{
+    color: rgba(26,26,26,0.7);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+
+}
+
+.column-left{
+    padding: 1rem;
+    width: 50%;
+}
+.column-right{
+    padding: 1rem;
+    width: 50%;
+}
+.column-left-item{
+    margin-top: 3rem;
+}
+.column-right-item{
+    margin-top: 3rem;
+}
+
+ /* S.S.S Page End */

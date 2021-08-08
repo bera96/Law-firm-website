@@ -42,8 +42,12 @@ INSTALLED_APPS = [
     #Custom Apps
     'post',
     'main',
+    'employee',
     #Third Party Apps
     'crispy_forms',
+    'django_cleanup',
+    'ckeditor',
+    'captcha',
 
 
 ]
@@ -71,6 +75,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages',
+                'website.header_context.header_data',
             ],
         },
     },
@@ -130,7 +136,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')  be carefull go to live
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')  
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
@@ -140,6 +146,11 @@ MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+RECAPTCHA_PUBLIC_KEY = '6Le5gtkbAAAAALK243Ox8wUDq2D2WMGEtJv0MomO'
+RECAPTCHA_PRIVATE_KEY = '6Le5gtkbAAAAABhimObDQgT4RcP-bholymo3qFk1'
+
+#Recaptcha public and private key just for development stage
 
 
 

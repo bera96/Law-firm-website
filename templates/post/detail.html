@@ -3,16 +3,71 @@
 
 {% block body %}
 
-    {% include 'partials/header.html' %}
-    Burası Post-Detay
+    <div id="blog-details-container">
+        <div id="blog-details-overlay">
+                {% include 'partials/header.html' %}
+            <div class="description-wrapper blog-details-wrapper">
+                <p class="wrapper-time">{{post.published_date|date}}</p>
+                <p class="desc-bold blog-details-desc"><strong>{{post.title|title}}</strong></p>
+            </div>
+        </div>
+    </div>
 
-        
-    {{post.id}}<br>
-   <img src="{{post.image.url}}" >
-    {{post.title}}<br>
-    {{post.content}}<br>
-    {{post.published_date}}<br>
-    <hr>
+    <main id="page">
+        <div class="page-content blog-details-page-content">
+            <div class="blog-details-content">
+                {% if employee.image %}
+                    <img src="{{post.image.url}}" >
+                {% endif %}
+                {{post.content|safe}}<br>
+                <p class="entry-tags">Tagged: <a href="">sexual harassment</a>,<a href=""> hostile work environment</a>,
+                    <a href="">quid pro quo</a>, <a href="">TWC Civil Rights Division</a>,
+                    <a href="">Charge of Discrimination
+                    </a>
+                </p>
+
+                <div class="entry-actions">
+                    <div class="like-action"> <i class="fas fa-heart"></i>
+                        <span class="ea-1">0 Likes</span>
+                    </div>
+
+                    <div class="share-action">
+                        <i class="fas fa-share-alt"></i>
+                        <span class="ea-2">&nbspShare</span>
+                        <div class="share-toggle">
+                            <i class="fab fa-twitter">&nbspTweet</i>
+                            <i class="fas fa-thumbs-up">&nbspLike&nbsp 0</i>
+                            <i class="fab fa-linkedin">&nbspShare</i>
+
+                        </div>
+                    </div>
+
+                </div>
+                {% if older_post %}
+                    <div class="older">
+                    <span>Older Post</span>
+                        <div class="older-post-name">
+                            <a href="{{older_post.get_absolute_url}}">{{older_post.title|title}}<br></a>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if newer_post %}
+                    <div class="older">
+                    <span>Newer Post</span>
+                        <div class="older-post-name">
+                            <a href="{{newer_post.get_absolute_url}}">{{newer_post.title|title}}<br></a>
+                        </div>
+                    </div>
+                {% endif %}
+
+
+                
+            </div>
+
+        </div>
+    </main>
+
+    
 
 
 

@@ -4,20 +4,62 @@
 
 {% block body %}
 
-    {% include 'partials/header.html' %}
-    Burası Post-Index
+    <div id="blog-container">
+        <div id="blog-overlay">
+        {% include 'partials/header.html' %}
 
-    {% for post in posts  %}
-    
-        {{post.id}}<br>
-        <a href="{{post.get_absolute_url}}">{{post.title|title}}<br></a>
-        {{ post.content|safe|truncatewords:"50"|linebreaks }}
-        <a href="{{ post.get_absolute_url }}">read more</a>
-        {{post.published_date}}<br>
-        <hr>
-    
-    
-    {% endfor %}
+            <div id="description-wrapper">
+                <p class="desc-bold"><strong>BLOG</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <main id="page">
+        <div class="page-content blog-page-content">
+            <form class="navbar-form navbar-left" role="search" method="GET" action="">
+                <div class="input-group">
+                    <input class="form-control blog-search" type="text" name="query" placeholder="Blog'da Ara" value="{{ request.GET.query }}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default blog-search-button" type="submit" value="">
+                    </span>
+                </div>
+            </form>
+
+            <div class="blogs">
+                {% for post in page_obj  %}
+                <div class="blog">
+                    <a class="blog-date" href="">{{post.published_date}}<br></a>
+                    <h1> <a href="{{post.get_absolute_url}}">{{post.title|title}}<br></a></h1>
+                    {{ post.content|safe|truncatewords:"50"|linebreaks }}
+                    <a class="readmore" href="{{post.get_absolute_url}}">Read More→</a>
+                </div>
+                {% endfor %}
+
+                <div class="pagination">
+                    <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.query %}&query={{ request.GET.query }}{% endif %}">Newer Posts</a>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}{% if request.GET.query %}&query={{ request.GET.query }}{% endif %}">Older Posts</a>
+                    {% endif %}
+                    </span>
+                </div>
+            </div>
+            {% if page_obj is False %}
+            <div class="blogs-404" >
+                <h2>Makale Yok.</h2>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+
+
+
+
+   
+ 
 
 
 

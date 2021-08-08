@@ -1,6 +1,6 @@
 from django.db import models
-from django.db.models.fields import CharField
-
+from ckeditor.fields import RichTextField
+from employee.models import UpperCaseField
 
 
 
@@ -13,5 +13,23 @@ class Message(models.Model):
     email = models.EmailField(max_length=254, default=None, verbose_name="Email")
     subject = models.TextField(verbose_name="Mesaj")
     date = models.DateTimeField(auto_now_add=True)
+
+
+
+
+class Faqs(models.Model):
+    title = UpperCaseField(max_length = 255)
+    desc = RichTextField(verbose_name="Desciption")
+
+
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = "Faqs"
+
+
 
 

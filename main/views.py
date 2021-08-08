@@ -1,6 +1,8 @@
 from django.shortcuts import redirect, render
 from .forms import MessageForm
+from .models import Faqs
 from django.contrib import messages
+from employee.models import Employee
 
 
 
@@ -33,14 +35,40 @@ def contact_view(request):
 
     return render(request, 'main/contactus.html',context ) 
 
+
+
+
+
 def questions_view(request):
 
-    return render(request, 'main/faqs.html' ) 
+    faqs = Faqs.objects.all()
+    faqs_even = [faq for faq in faqs if faq.id%2==0]
+    faqs_odd = [faq for faq in faqs if not faq.id%2==0]
+
+    context = {
+        'faqs_odd':faqs_odd,
+        'faqs_even':faqs_even,
+    }
+
+    return render(request, 'main/faqs.html',context ) 
+
+
+
+
+
 
 
 def aboutus_view(request):
 
-    return render(request, 'main/aboutus.html' ) 
+    employees = Employee.objects.all()
+    context = {
+        'employees':employees,
+    }
+    return render(request, 'main/aboutus.html',context)
+
+
+
+    
 
 def practice_areas_view(request):
 
