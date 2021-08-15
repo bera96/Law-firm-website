@@ -13,6 +13,8 @@ class Post(models.Model):
     content = RichTextField(verbose_name="Content")
     published_date = models.DateTimeField(verbose_name="Publish Date",auto_now_add=True)
     image = models.ImageField(null=True, blank=True)
+    number_like = models.IntegerField(editable=False, default=0)
+    number_share = models.IntegerField(editable=False, default=0)
     slug = models.SlugField(unique=True, editable=False, max_length=265)
 
 

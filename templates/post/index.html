@@ -27,7 +27,7 @@
             <div class="blogs">
                 {% for post in page_obj  %}
                 <div class="blog">
-                    <a class="blog-date" href="">{{post.published_date}}<br></a>
+                    <a class="blog-date" href="">{{post.published_date|date}}<br></a>
                     <h1> <a href="{{post.get_absolute_url}}">{{post.title|title}}<br></a></h1>
                     {{ post.content|safe|truncatewords:"50"|linebreaks }}
                     <a class="readmore" href="{{post.get_absolute_url}}">Read More→</a>

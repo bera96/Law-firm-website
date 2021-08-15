@@ -44,7 +44,7 @@ class Employee(models.Model):
 
     name = models.CharField(max_length=255, verbose_name="Name")
     surname = models.CharField(max_length=255, verbose_name="Surname")
-    description = RichTextField(verbose_name="Desciption")
+    description = RichTextField(verbose_name="Description")
     faculty =  models.CharField(max_length=255, verbose_name="Faculty")
     graduated_date=models.DateField(verbose_name="Graduated Date")
     image = models.ImageField(null=True, blank=True, verbose_name="Employee's Photo")

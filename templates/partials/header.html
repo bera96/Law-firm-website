@@ -14,9 +14,9 @@
         <div class="site-list-item">
             <a href="{% url 'main:aboutus' %}">HAKKIMIZDA
                 <ul>
-                    <a href="about.html"><li>Hakkımızda</li></a>
+                    <a href={% url 'main:aboutus' %}><li>Büro</li></a>
                     {% for employee in context_employees %}
-                        <a href="{{employee.get_absolute_url}}"><li>{{employee.name|title}}</li><br></a>
+                        <a href="{{employee.get_absolute_url}}"></a><li>{{employee.name|title}}</li><br></a>
                     {% endfor %}
                 </ul>
             </a>

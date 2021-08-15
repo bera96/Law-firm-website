@@ -19,8 +19,8 @@
         <div class="page content about-page-content">
             <div class="about-aside">
                 <ul>
-                    <li class="about-aside-list-title"> About</li>
-                    <li class="about-aside-list-item "><a class="active" href="#">WHAT MAKES US DIFFERENT</a></li>
+                    <li class="about-aside-list-title"> Hakkımızda</li>
+                    <li class="about-aside-list-item "><a class="active" href="#">Büro</a></li>
                     {% for employee in employees  %}
                         <li class="about-aside-list-item"><a href="{{employee.get_absolute_url}}">{{employee.name|title}}<br></a></li>
                     {% endfor %}

@@ -8,14 +8,6 @@ const value = document.querySelector(".ea-1");
 const list=document.querySelectorAll(".about-aside-list-item");
 const share=document.querySelector(".ea-4")
 const links=document.querySelector(".share-toggle")
-const number = document.querySelector("#id_phone_number")
-const form = document.getElementsByTagName('form')
-
-form.addEventListener('submit', function(event){
-    event.preventDefault()
-    console.log("submit is preventingggggggggggggggg")
-})
-
 
 
 
@@ -37,6 +29,12 @@ share.addEventListener("click",function(){
     links.classList.toggle("show-share")
 
 })
+
+
+
+
+
+
 
 
 //update link number 

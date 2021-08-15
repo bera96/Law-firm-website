@@ -9,6 +9,7 @@
             <div class="description-wrapper blog-details-wrapper">
                 <p class="wrapper-time">{{post.published_date|date}}</p>
                 <p class="desc-bold blog-details-desc"><strong>{{post.title|title}}</strong></p>
+                <input type="hidden" id="post_obj" name="variable" value="{{ post.id }}">
             </div>
         </div>
     </div>
@@ -16,7 +17,7 @@
     <main id="page">
         <div class="page-content blog-details-page-content">
             <div class="blog-details-content">
-                {% if employee.image %}
+                {% if post.image %}
                     <img src="{{post.image.url}}" >
                 {% endif %}
                 {{post.content|safe}}<br>
@@ -25,20 +26,21 @@
                     <a href="">Charge of Discrimination
                     </a>
                 </p>
-
                 <div class="entry-actions">
                     <div class="like-action"> <i class="fas fa-heart"></i>
-                        <span class="ea-1">0 Likes</span>
+                        <span class="ea-1">{{post.number_like}}</span>
+                        <span class="ea-2">Likes</span>
                     </div>
-
+                   
                     <div class="share-action">
                         <i class="fas fa-share-alt"></i>
-                        <span class="ea-2">&nbspShare</span>
+                        <span class="ea-3">{{post.number_share}}</span>
+                        <span class="ea-4">&nbspShare</span>
                         <div class="share-toggle">
-                            <i class="fab fa-twitter">&nbspTweet</i>
-                            <i class="fas fa-thumbs-up">&nbspLike&nbsp 0</i>
-                            <i class="fab fa-linkedin">&nbspShare</i>
-
+                        
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute_uri}}"><i class="fab fa-facebook-square">Facebook</i></a>
+                        <a href="https://twitter.com/home?status={{share_string}}%20{{request.build_absolute_uri}}"><i class="fab fa-twitter-square">Twitter</i></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{request.build_absolute_uri}}&title={{post.title}}&summary={{share_string}}&source={{request.build_absolute_uri}}"><i class="fab fa-linkedin">Linkedin</i></a>
                         </div>
                     </div>
 

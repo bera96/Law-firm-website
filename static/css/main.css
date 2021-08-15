@@ -759,6 +759,7 @@ footer{
     color: rgba(26, 26, 26, 0.4)
 }
 .entry-actions{
+    height: 20px;
     display: flex;
 }
 .entry-actions a{
@@ -771,7 +772,7 @@ footer{
 .entry-actions span{
     color: rgba(26, 26, 26, 0.4)
 }
-.ea-1{
+.ea-1, .ea-2{
     margin-left: 0.2rem;
 }
 .entry-actions i{
@@ -783,7 +784,7 @@ footer{
     margin-left: 2rem;
 }
 .share-action{
-    margin-left: 2rem;
+    margin-left: 4rem;
     
 }
 .like-action{
@@ -855,3 +856,4 @@ footer{
     height: 1rem;
 
 }
+
