@@ -1,10 +1,10 @@
 <footer>
     <div id="site-info">
-      
-        <span>Tremain Artaza PLLC, 13140 Coit Road, Ste 104, Dallas, TX, 75240, United States </span>
+      {% for settings in context_settings %}
+        <span> {{settings.address}}<br></span>
         <br>
-        <span>(469) 573-0229 INFO@TREMAINARTAZA.COM</span>
+        <span>{{settings.number}}|{{settings.email}}</span>
+      {% endfor %}
+        
     </div>
-    
-
 </footer>

@@ -76,7 +76,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.contrib.messages.context_processors.messages',
-                'website.main_context.header_data',
+                'website.main_context.general_data',
             ],
         },
     },
@@ -149,6 +149,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 RECAPTCHA_PUBLIC_KEY = '6Le5gtkbAAAAALK243Ox8wUDq2D2WMGEtJv0MomO'
 RECAPTCHA_PRIVATE_KEY = '6Le5gtkbAAAAABhimObDQgT4RcP-bholymo3qFk1'
+
+API_KEY = 'AIzaSyA0CTMleLLU_4V9NFDcK2r3G1o7WB5jcAs'
 
 #Recaptcha public and private key just for development stage
 

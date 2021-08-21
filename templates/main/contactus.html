@@ -1,17 +1,48 @@
+
 {% extends 'partials/base.html' %}
 {% block title %}İletişim{% endblock%}
 {% load crispy_forms_tags %}
 
 {% block body %}
 
-    {% include 'partials/header.html' %}
-
-     <form action="" method="post">
+{% include 'partials/header.html' %}
+<div class="almighty">
+<div class="all-page">
+    <div class="contactus-left">
+    <div class="contactus-info">
+        <h1>İletişim</h1>
+        {% for settings in context_settings %}
+            <p>E-mail: <span>{{settings.email}}</span></p>
+            <p>Adres: <span>{{settings.address}}</span></p>
+            <p>Telefon: <span>{{settings.number}}</span></p>
+            <p>lon,lan: <span>{{settings.get_location_coordinates}}</span></p>
+         {% endfor %}
+        <div class="contactus-social">
+            <a target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href=""><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href=""><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href=""><i class="fab fa-google-plus-g"></i></a>
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9308260621974!2d29.937184315656502!3d40.763546142396926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4f87fb5ea0b1%3A0x32f5aff4ba1edae9!2sKocaeli%20Adliyesi!5e0!3m2!1str!2str!4v1628422311274!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+    <div class="contact-us-wrapper">
+        
+    <div class="contact-uscontainer">
+        <form class="contact-form" action="" method="post">
             {% csrf_token %}
             <h1>Bize Ulaşın</h1>
+            <p>Lütfen formu doldurun.</p>
             {{form|crispy}}
-            <input type="submit", value="Gönder">
+            <input type="submit" , value="Gönder">
         </form>
-       
-{% endblock  %}
+    </div>
+    </div>
+</div>
+</div>
 
+
+
+{% endblock %}

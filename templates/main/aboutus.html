@@ -27,54 +27,9 @@
                 </ul>
             </div>
             <div class="about-article">
-                <div class="about-article-item">
-                    <h1>Expertise</h1>
-                    
-                    <p>Since 2005, our attorneys have practiced Employment Law exclusively.  We know the law, and we have the practical experience to back it up.  Our attorneys have handled cases in the state, county, and federal courts, and private arbitrations across Texas, Arizona, Michigan and California, including the appellate courts of the 5th, 6th, 8th, and 9th Circuit Federal Courts of Appeals and the United States Supreme Court, as well as the EEOC, NLRB, DOL, and MSPB.</p>
-                </div  >
-                <div class="about-article-item">
-                    <div class="about-article-item-photo">
-                        <img src="./img/about-article1.jpg" alt="">
-                    </div>
-                    <p class="article-p-right">We are Board Certified in Labor & Employment law.  Board Certified lawyers are the only attorneys allowed to publicly represent themselves as specialists in a select area of the law. This designation is reserved for attorneys with the highest, public commitment to excellence in their area of law.  According to the TBLS, it means we have "substantial, relevant experience" in employment law, as well as "demonstrated, and tested, special competence" in the area.  There are more than 70,000 attorneys licensed to practice in Texas. Less than 10% are Board Certified. 
-
-                        We don't use experience as a crutch, and we never stop learning.  That's why we're members of the College of the State Bar of Texas.  The College recognizes lawyers who maintain and enhance their professional skills, and the quality of their service to the public, by significant voluntary participation in legal education.  That means we go above-and-beyond the minimum attorney education requirements - always striving to improve and to better assist our clients.</p>
-                </div>
-                <div class="about-article-item">
-                    <h1>Peer & Client Recognition</h1>
-                    <p>All attorneys in the firm have both been recognized by their peers as "Rising Stars" and “Super Lawyers” in the area of employment law for many years running.  Super Lawyers is a lawyer rating service created by Thomson Reuters.  The selection process includes independent research, peer nominations and peer evaluations.  We've also achieved a "Superb" (10 out of 10) rating on avvo.com - a rating system that includes peer and client evaluations.  We've been listed in the U.S. News “Best Law Firms in America” and "Best Lawyers in America" for 2016, 2017, 2018, 2019, 2021, and 2021 in the fields of Employment Law for Individuals, and Labor & Employment Litigation.</p>
-                </div>
-                <div class="about-article-item">
-                    <h1>Modern, Efficient Methods</h1>
-                    <div class="about-article-right2">
-                        <img src="./img/about-article2.png" alt="">
-                    </div>
-                    <img src="" alt="">
-                    <p>It's often said that lawyers are slow to change.  We reject that tradition, embracing technology as a tool to help us serve our clients more efficiently.  In our years of practice, we've identified many outdated methods in the practice of law, and aim to fix them.  Here are just a few of our improvements:</p>
-                    <ul class="about-article-first-ul">
-                        <li><strong>Easy, Real-Time Scheduling.</strong><p>Our clients usually reach out to us in times of crisis. The traditional model is slow and cumbersome - requiring clients them to leave email or phone messages, wait for a call-back, or cross-check calendars through an assistant. Recognizing the frequent need for immediate assistance, we've implemented a do-it-yourself online scheduling system. Now, potential clients can schedule themselves, and know immediately how soon they can be seen.</p></li>
-
-                        <li><strong>Electronic Payment Options. </strong><p>Many law firms still require old-fashioned forms of payment: cash, paper checks, or telephone-based credit card processing. While we do accept these forms of payment, we don't require them. We prefer the ease of electronic payment processing - our clients can get their invoices via email, and pay online with a debit or credit card. We use only use secure processors to give our clients peace of mind.</p></li>
-                    </ul>
-                </div>
-                <div class="about-article-item">
-                    <h1>Honest, Upfront Billing</h1>
-                    <div class="about-article-left">
-                        <img src="./img/about-article3.jpg" alt="">
-                    </div>
-                    <p>We believe that lawyers should not be in the business of sales.  Too often, we talk to folks  who have signed up for a lawsuit without a clear understanding of the finances involved.  This causes confusion and dissatisfaction - two feelings that we never want our clients to experience.  That's why we publish our rates, and we make sure that all financial issues are clearly understood before we move forward with any representation.</p>
-                </div>
-                <div class="about-article-item">
-                    <h1>Honest Risk Assessment</h1>
-                    <p>We'll say it again - we are not in the business of sales.  Legal action - whether it's a simple counter-proposal on a severance offer, or a full-blown lawsuit - always involves some risk.  To skim over that fact would be a grave disservice to our clients.  Before we agree to representation, we make sure our clients understand all the benefits and risks involved in our proposed course of action.  Our goal is to give you the tools necessary to make an informed decision for yourself.  At Tremain Artaza, you can expect an honest, straightforward evaluation of:</p>
-                    <ul class="about-article-last-ul">
-                        <li><p>the merits of your case;</p></li>
-                        <li><p>the drawbacks and hurdles in your case;</p></li>
-                        <li><p>the chances that you will prevail;</p></li>
-                        <li><p>what you are likely to recover if you do prevail; and</p></li>
-                        <li><p>what the costs and risks will be if you proceed.</p></li>
-                    </ul>
-                </div>
+                    {% for settings in  context_settings %}
+                    {{settings.about|safe}}
+                    {% endfor %}
             </div>
         </div>
     </main>

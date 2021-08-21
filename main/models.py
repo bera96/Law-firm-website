@@ -1,6 +1,12 @@
+from website.settings import API_KEY
 from django.db import models
 from ckeditor.fields import RichTextField
 from employee.models import UpperCaseField, Certificate
+from website.settings import API_KEY
+import requests
+
+
+
 
 
 
@@ -52,6 +58,15 @@ class GeneralSettings(models.Model):
 
     class Meta:
         verbose_name_plural = "Settings"
+
+
+
+    def get_location_coordinates(self):
+        url = f'https://maps.googleapis.com/maps/api/geocode/json?address={self.address}&key={API_KEY}'
+        response = requests.get(url)
+        resp_json_payload = response.json()
+        return resp_json_payload['status']
+    
 
 
     
