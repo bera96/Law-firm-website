@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from .forms import MessageForm
 from .models import Faqs
 from django.contrib import messages
-from employee.models import Employee
+from employee.models import Employee, PracticeAreas
 
 
 
@@ -71,4 +71,9 @@ def aboutus_view(request):
 
 def practice_areas_view(request):
 
-    return render(request, 'main/practiceareas.html' ) 
+    practice_areas = PracticeAreas.objects.all()
+    context = {
+        'practice_areas':practice_areas,
+    }
+
+    return render(request, 'main/practiceareas.html', context ) 

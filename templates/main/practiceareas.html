@@ -6,8 +6,43 @@
 
 {% block body %}
 
-{% include 'partials/header.html' %}
 
-    <h2>Faaliyet Alanları</h2>
+<div id="practiceareas-container">
+    <div id="practiceareas-overlay">
+        {% include 'partials/header.html' %}
+
+        <div id="description-wrapper">
+            <p class="desc-bold"><strong>{{practice_areas|first}}</strong></p>
+        </div>
+
+    </div>
+</div>
+
+<main id="page">
+    <div class="page-content practiceareas-page-content">
+        <div class="practiceareas-aside">
+            <ul>
+                <li class="practice-areas-list-title">Practice Areas</li>
+                {% for area in practice_areas %}
+                    <li class="practice-areas-list-item"><a class="active" href="">{{practice_areas.title}}</a></li>
+                {% endfor %}
+
+            </ul>
+        </div>
+        <div class="practiceareas-article">
+            <h2><strong>WHAT IS WRONGFUL TERMINATION?</strong></h2>
+            
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</main>
+
 
 {% endblock %}

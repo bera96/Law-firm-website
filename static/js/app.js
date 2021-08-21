@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const btnTop=document.querySelector(".btntop");
@@ -11,6 +12,12 @@ const links=document.querySelector(".share-toggle")
 
 
 // Scroll To Top
+=======
+// Scroll To Top
+
+const btnTop=document.querySelector(".btntop");
+
+>>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 btnTop.addEventListener("click",function(){
     window.scrollTo({
         top:0,
@@ -19,6 +26,7 @@ btnTop.addEventListener("click",function(){
     });
 })
 
+<<<<<<< HEAD
 
 
 
@@ -100,3 +108,21 @@ function updateNumberLink() {
 
 
 
+=======
+// Tab
+
+const list=document.querySelectorAll(".about-aside-list-item");
+
+//Share 
+
+const share=document.querySelector(".ea-2")
+const links=document.querySelector(".share-toggle")
+
+
+
+share.addEventListener("click",function(){
+
+    links.classList.toggle("show-share")
+
+})
+>>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441

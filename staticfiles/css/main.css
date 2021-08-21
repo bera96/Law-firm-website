@@ -1,6 +1,9 @@
 /* Global Css */
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 *{
     margin: 0;
     padding: 0;
@@ -312,9 +315,7 @@ main{
 }
 
 /* Footer */
-footer{
-    
-}
+
 #site-info{
     background-color:#1f1f1f;
     text-align: center;
@@ -334,8 +335,11 @@ footer{
     
 }
 
+<<<<<<< HEAD
 /* Main Page End */
 
+=======
+>>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 /* SSS Page Start */
 
 #sss-container{
@@ -429,6 +433,7 @@ footer{
     margin-top: 3rem;
 }
 
+<<<<<<< HEAD
  /* S.S.S Page End */
 
  /* About Start */
@@ -857,3 +862,6 @@ footer{
 
 }
 
+=======
+ /* S.S.S Page End */
+>>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
