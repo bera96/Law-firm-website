@@ -11,7 +11,7 @@
         <div class="site-list-item">
             <a href="{% url 'main:faqs' %}">S.S.S</a>
         </div>
-        <div class="site-list-item">
+         <div class="site-list-item about-dropdwn">
             <a href="{% url 'main:aboutus' %}">HAKKIMIZDA
                 <ul>
                     <a href={% url 'main:aboutus' %}><li>Büro</li></a>
@@ -26,10 +26,10 @@
             <a href="">DANIŞMA</a>
         </div>
         <div class="site-list-item about-dropdwn">
-            <a href="{% url 'main:practice_areas' %}">FAALİYET ALANLARI
+            <a href="">FAALİYET ALANLARI
                 <ul>
                     {% for area in context_practice_areas %}
-                        <a href=""><li>{{area.title|title}}</li><br></a>
+                        <a href="{{area.get_absolute_url}}"><li>{{area.title|title}}</li><br></a>
                     {% endfor %}
                 </ul>
             

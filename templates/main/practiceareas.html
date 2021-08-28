@@ -24,14 +24,14 @@
             <ul>
                 <li class="practice-areas-list-title">Practice Areas</li>
                 {% for area in practice_areas %}
-                    <li class="practice-areas-list-item"><a class="active" href="">{{practice_areas.title}}</a></li>
+                    <li class="practice-areas-list-item"><a href="{{area.get_absolute_url}}">{{area.title}}</li>
                 {% endfor %}
 
             </ul>
         </div>
         <div class="practiceareas-article">
-            <h2><strong>WHAT IS WRONGFUL TERMINATION?</strong></h2>
-            
+            <h2><strong>{{current_area.title}}</strong></h2>
+            {{current_area.desc|safe}}
         </div>
 
 

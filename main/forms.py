@@ -11,7 +11,7 @@ import re
 
 class MessageForm(forms.ModelForm):
 
-    #captcha = ReCaptchaField()
+    captcha = ReCaptchaField()
 
 
 

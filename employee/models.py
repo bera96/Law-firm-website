@@ -29,11 +29,34 @@ class PracticeAreas(models.Model):
 
     title = UpperCaseField(max_length = 255)
     desc = RichTextField(verbose_name="Desciption")
+    slug = models.SlugField(unique=True, editable=False, max_length=265)
 
 
 
     def __str__(self):
         return self.title
+    
+    def save(self, *args, **kwargs):
+        self.slug = self.get_unique_slug()
+        return super(PracticeAreas, self).save(*args, **kwargs)
+
+
+
+
+
+    
+    def get_absolute_url(self):
+        return reverse("main:practice_areas", kwargs={"slug": self.slug})
+
+
+    def get_unique_slug(self):
+        slug = slugify(self.title.replace('ı', 'i'))
+        unique_slug = slug
+        counter = 1
+        while Employee.objects.filter(slug=unique_slug).exists():
+            unique_slug = '{}-{}'.format(slug, counter)
+            counter += 1
+        return unique_slug
 
     class Meta:
         verbose_name_plural = "Practice Areas"

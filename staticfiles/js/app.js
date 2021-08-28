@@ -10,7 +10,6 @@ const share=document.querySelector(".ea-4")
 const links=document.querySelector(".share-toggle")
 
 
-
 // Scroll To Top
 btnTop.addEventListener("click",function(){
     window.scrollTo({
@@ -29,12 +28,6 @@ share.addEventListener("click",function(){
     links.classList.toggle("show-share")
 
 })
-
-
-
-
-
-
 
 
 //update link number 
@@ -103,6 +96,16 @@ function updateNumberLink() {
 
 }
 
+
+
+
+//Ajax for Practice Areas
+
+
+const items = document.getElementsByClassName("practice-areas-list-item");
+console.log(items);
+
+console.log("lşkfsdddddddddddddddddş")
 
 
 

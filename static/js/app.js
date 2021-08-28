@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 
 
 const btnTop=document.querySelector(".btntop");
-const postID = document.getElementById("post_obj").value;
+const post = document.getElementById("post_obj");
 const likeBtn = document.querySelector('.like-action')
 const icon = document.querySelector('.like-action i')
 const value = document.querySelector(".ea-1");
@@ -11,13 +10,24 @@ const share=document.querySelector(".ea-4")
 const links=document.querySelector(".share-toggle")
 
 
-// Scroll To Top
-=======
-// Scroll To Top
 
-const btnTop=document.querySelector(".btntop");
+const items = document.querySelectorAll(".practice-areas-list-item");
+items.forEach(function(item) {
 
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
+    item.addEventListener('click', ()=>{
+        let path = window.location.href;
+        let link = item.getAttribute('href')
+        
+        
+        console.log(path)
+        console.log(item.baseURI)
+
+    })
+    
+})
+
+
+// Scroll To Top
 btnTop.addEventListener("click",function(){
     window.scrollTo({
         top:0,
@@ -26,7 +36,6 @@ btnTop.addEventListener("click",function(){
     });
 })
 
-<<<<<<< HEAD
 
 
 
@@ -76,7 +85,7 @@ function createRequestforLike() {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-        'post_id':postID,
+        'post_id':post.value,
     })
     };
     return new Request(url,params);
@@ -107,22 +116,9 @@ function updateNumberLink() {
 
 
 
-
-=======
-// Tab
-
-const list=document.querySelectorAll(".about-aside-list-item");
-
-//Share 
-
-const share=document.querySelector(".ea-2")
-const links=document.querySelector(".share-toggle")
+//Ajax for Practice Areas
 
 
 
-share.addEventListener("click",function(){
 
-    links.classList.toggle("show-share")
 
-})
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441

@@ -93,20 +93,12 @@ a{
 }
 .about-dropdwn ul{
     left: -1rem;
-<<<<<<< HEAD
-    width: 12rem;
-    position: absolute;
-    background-color:#212121;
-    display: none;
-    padding: 0 1.5rem;
-=======
     width: 17rem;
     height: auto;
     position: absolute;
     background-color:#212121;
     display: none;
     padding: 0.5rem 1.5rem;
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
     
     
     
@@ -115,8 +107,6 @@ a{
 }
 .about-dropdwn{
    
-<<<<<<< HEAD
-=======
     
 }
 .about-dropdwn:hover>ul{
@@ -126,30 +116,6 @@ a{
 .about-dropdwn li{
     display: none;
     
-    
-}
-.about-dropdwn:hover>ul li{
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
-    
-    display: block;
-}
-
-.site-list-item ul a{
-    text-transform: uppercase;
-    
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    line-height: 25px;
-    transition: 0.3s ease-in-out;
-}
-<<<<<<< HEAD
-.about-dropdwn:hover>ul{
-    
-   display: block;
-}
-.about-dropdwn li{
-    display: none;
     
 }
 .about-dropdwn:hover>ul li{
@@ -166,8 +132,6 @@ a{
     line-height: 25px;
     transition: 0.3s ease-in-out;
 }
-=======
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 
 .site-list-item a{
     font-size: 12px;
@@ -625,11 +589,7 @@ footer{
     text-align: center;
 }
 .lawyer-article-text p{
-<<<<<<< HEAD
-    text-align: left;
-=======
     
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
     color:rgba(26, 26, 26, 0.7);
     font-size: 18px;
     font-weight: 400;
@@ -681,11 +641,6 @@ footer{
 /* Lawyer End   */
 
 /* Blog Start */
-<<<<<<< HEAD
-.blog-page-content{
-    width: 72%;
-}
-=======
 .blog-search{
     
     padding: 1rem 3rem;
@@ -717,7 +672,6 @@ footer{
     display: none;
 }
 
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 #blog-container{
     width: 100%;
     height: 32rem;
@@ -835,10 +789,6 @@ footer{
     color: rgba(26, 26, 26, 0.4)
 }
 .entry-actions{
-<<<<<<< HEAD
-    height: 20px;
-=======
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
     display: flex;
 }
 .entry-actions a{
@@ -851,11 +801,7 @@ footer{
 .entry-actions span{
     color: rgba(26, 26, 26, 0.4)
 }
-<<<<<<< HEAD
-.ea-1, .ea-2{
-=======
 .ea-1{
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
     margin-left: 0.2rem;
 }
 .entry-actions i{
@@ -867,11 +813,7 @@ footer{
     margin-left: 2rem;
 }
 .share-action{
-<<<<<<< HEAD
-    margin-left: 4rem;
-=======
     margin-left: 2rem;
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
     
 }
 .like-action{
@@ -943,9 +885,6 @@ footer{
     height: 1rem;
 
 }
-<<<<<<< HEAD
-
-=======
 /* Blog Details End */
 
 /* Contact Us Start */
@@ -1157,4 +1096,3 @@ footer{
     text-align: left;
     
 }
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441

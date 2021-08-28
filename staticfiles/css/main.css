@@ -1,9 +1,6 @@
 /* Global Css */
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +17,7 @@ ol,ul {
     list-style:none;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -96,11 +93,12 @@ a{
 }
 .about-dropdwn ul{
     left: -1rem;
-    width: 12rem;
+    width: 17rem;
+    height: auto;
     position: absolute;
     background-color:#212121;
     display: none;
-    padding: 0 1.5rem;
+    padding: 0.5rem 1.5rem;
     
     
     
@@ -117,6 +115,7 @@ a{
 }
 .about-dropdwn li{
     display: none;
+    
     
 }
 .about-dropdwn:hover>ul li{
@@ -165,7 +164,7 @@ a{
 /* Landing Page Description */
 
 #description-wrapper{
-    width: 20rem;
+    width: 100% ;
     text-align: center;
     align-items: center;
     margin: 0 auto;
@@ -315,7 +314,9 @@ main{
 }
 
 /* Footer */
-
+footer{
+    
+}
 #site-info{
     background-color:#1f1f1f;
     text-align: center;
@@ -335,11 +336,8 @@ main{
     
 }
 
-<<<<<<< HEAD
 /* Main Page End */
 
-=======
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
 /* SSS Page Start */
 
 #sss-container{
@@ -433,7 +431,6 @@ main{
     margin-top: 3rem;
 }
 
-<<<<<<< HEAD
  /* S.S.S Page End */
 
  /* About Start */
@@ -592,7 +589,7 @@ main{
     text-align: center;
 }
 .lawyer-article-text p{
-    text-align: left;
+    
     color:rgba(26, 26, 26, 0.7);
     font-size: 18px;
     font-weight: 400;
@@ -644,9 +641,37 @@ main{
 /* Lawyer End   */
 
 /* Blog Start */
+.blog-search{
+    
+    padding: 1rem 3rem;
+    opacity: 0.7;
+    align-items: center;
+    border: 1px solid rgb(170, 170, 170);
+    background: url(../img/search-icon.png) no-repeat 15px ;
+    
+    width: 60rem;
+    height: 3.2rem;
+    
+}
+.blog-search:hover{
+    opacity: 1;
+  }
+  .blog-search:focus{
+      box-shadow: none;
+     
+      border: 2px solid rgb(16, 16, 16);
+  }
+  .blog-search::placeholder{
+      font-size: 18px;
+      
+  }
 .blog-page-content{
     width: 72%;
 }
+.blog-search-button{
+    display: none;
+}
+
 #blog-container{
     width: 100%;
     height: 32rem;
@@ -764,7 +789,6 @@ main{
     color: rgba(26, 26, 26, 0.4)
 }
 .entry-actions{
-    height: 20px;
     display: flex;
 }
 .entry-actions a{
@@ -777,7 +801,7 @@ main{
 .entry-actions span{
     color: rgba(26, 26, 26, 0.4)
 }
-.ea-1, .ea-2{
+.ea-1{
     margin-left: 0.2rem;
 }
 .entry-actions i{
@@ -789,7 +813,7 @@ main{
     margin-left: 2rem;
 }
 .share-action{
-    margin-left: 4rem;
+    margin-left: 2rem;
     
 }
 .like-action{
@@ -861,7 +885,214 @@ main{
     height: 1rem;
 
 }
+/* Blog Details End */
 
-=======
- /* S.S.S Page End */
->>>>>>> 106d5a4db114ceb6c580a24d76ec55068cce4441
+/* Contact Us Start */
+
+.contact-us-wrapper{
+    background-color: #fff;
+   max-width: 850px;
+    margin-left: 20rem;
+    padding: 3rem 7rem;
+    border-radius: 2rem;
+}
+.contact-uscontainer{
+    background-color: #f8f8f8;
+    padding: 3rem;
+    width: 40rem;
+   
+}
+.contact-uscontainer input{
+    
+   color: white;
+   background-color: black;
+   padding: 0.6rem 3rem;
+   font-size: 20px;
+   font-weight: 700;
+   
+}
+.contact-uscontainer input:active{
+    background-color: rgba(16, 16, 16,0.7);
+}
+.all-page{
+    display: flex;
+    padding-left: 3rem;
+    padding-top: 5rem;
+    background-color: #e4e5e9;
+    padding-bottom: 6rem;
+}
+.contact-uscontainer h1{
+    color: #313131;
+    font-size: 32px;
+    font-weight: 700;
+}
+.contact-uscontainer p{
+    color: #84878d;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contact-uscontainer span{
+    display: none;
+}
+.contact-uscontainer label{
+    color: #585758;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contact-uscontainer form input:nth-child(1){
+    /* border-radius: none !important; */
+    background-color: #f8f8f8;
+    border:1px solid #cccccc
+    
+}
+.contact-uscontainer input:nth-child(1):focus{
+    background-color: #f8f8f8;
+   
+}
+.form-control{
+    resize: none;
+    background-color: #f8f8f8;
+    border:1px solid #cccccc
+}
+.form-control:focus{
+    background-color: #f8f8f8;
+}
+#div_id_name input{
+    
+    width: 30rem;
+    height: 2rem;
+}
+#div_id_phone_number input{
+    width: 30rem;
+    height: 2rem;
+}
+#div_id_email input{
+    width: 30rem ;
+    height: 2rem;
+}
+#div_id_subject textarea{
+    width: 30rem ;
+    height: 6rem;
+}
+.map{
+    /* max-width: 10rem; */
+}
+.map iframe{
+    border-radius: 2rem;
+    width: 25rem;
+    height: 25rem;
+}
+.contactus-info h1{
+    color: #313131;
+    font-size: 32px;
+    font-weight: 700;
+}
+.contactus-info p{
+    color: #313131;
+    font-size: 20px;
+    font-weight: 700;
+}
+.contactus-info span{
+    color: #84878d;
+    font-size: 20px;
+    font-weight: 600;
+}
+.contactus-left{
+    padding-top: 5.2rem;
+    padding-left: 5rem;
+}
+.contactus-social{
+    padding: 1rem;
+}
+.contactus-social i{
+    padding-right: 1rem;
+    font-size: 26px;
+
+}
+.contactus-social i:hover{
+    color: gray;
+}
+.contactus-social a{
+    color: black;
+}
+.almighty{
+    background-color:#e4e5e9;
+    width: 200rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Contact Us End */
+
+/* Practice Areas Start */
+
+#practiceareas-container{
+    width: 100%;
+    height: 36rem;
+    background: url(../img/practice-areas.jpeg) no-repeat;
+    background-size: cover;
+}
+#practiceareas-overlay{
+    width: 100%;
+    height: 36rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.practice-areas-list-title{
+    color: #00746b;
+     font-size: 22px;
+     font-weight: 400;
+     line-height: 26.4px;
+}
+.practice-areas-list-item{
+    width: 100%;
+    margin-top: 0.4rem   ;
+}
+
+.practice-areas-list-item a{
+    text-transform: uppercase;
+    
+    color: rgba(26,26,26,.4);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 17.5px;
+   
+}
+.practiceareas-article ul{
+    
+    list-style-type: disc;
+}
+.practiceareas-aside a:hover{
+    color: rgb(26, 26, 26)
+ }
+.practiceareas-page-content{
+    margin-bottom: 6rem;
+    display: flex;
+}
+.practiceareas-article{
+    padding-left: 8rem;
+}
+.practiceareas-article h2{
+    color: rgb(74, 74, 74);
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding-bottom: 1rem;
+
+    text-align: center;
+}
+.practiceareas-article p{
+    color:rgba(26, 26, 26, 0.7);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+}
+.article-align-left{
+    padding-top: 1rem;
+}
+.article-align-left p{
+    text-align: left;
+    
+}
