@@ -74,9 +74,6 @@ def practice_areas_view(request,slug):
    
     current_area = get_object_or_404(PracticeAreas,slug=slug)
     practice_areas = PracticeAreas.objects.all()
-    print("practice areas: ", practice_areas)
-    print("current_area areas: ", current_area)
-
     context = {
         'practice_areas':practice_areas,
         'current_area':current_area,
