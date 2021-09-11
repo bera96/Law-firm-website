@@ -2,7 +2,6 @@ import captcha
 from django import forms
 from django.forms import fields
 from .models import Message 
-from captcha.fields import ReCaptchaField
 from django.utils.translation import gettext as _
 import re
 
@@ -11,7 +10,6 @@ import re
 
 class MessageForm(forms.ModelForm):
 
-    captcha = ReCaptchaField()
 
 
 

@@ -1,71 +1,89 @@
 {% extends 'partials/base.html' %}
-{% block title %}Employee-Detay{% endblock%}
-
 {% block body %}
 
-     <div id="lawyer-container">
-        <div id="lawyer-overlay">
-                {% include 'partials/header.html' %}
-        </div>
+<div id="lawyer-container" >
+    <div id="lawyer-overlay">
+        {% include 'partials/header.html' %}
     </div>
+</div>
 
-    <main id="page">
+<main id="page">
 
-        <div class="page-content about-page-content">
-            <div class="about-aside">
-                <ul>
-                    <li class="about-aside-list-title"> About</li>
-                    <li class="about-aside-list-item "><a href="about.html">WHAT MAKES US DIFFERENT</a></li>
-                    {% for employee in employees  %}
-                        <li class="about-aside-list-item"><a href="{{employee.get_absolute_url}}">{{employee.name|title}}<br></a></li>
+    <div class="page-content about-page-content">
+        <div class="about-aside">
+            <ul>
+                <li class="about-aside-list-title"> Hakkımızda</li>
+                <li class="about-aside-list-item {% if request.path == aboutus %} active {% endif %}"><a
+                        href="{% url 'main:aboutus' %}">Büro</a></li>
+                {% for employee in employees %}
+                <li
+                    class="about-aside-list-item {% if request.path == employee.get_absolute_url %} active {% endif %} ">
+                    <a href="{{employee.get_absolute_url}}">
+                        {{employee.name|add:" "|add:employee.surname|title}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="about-article">
+            <div class="lawyer-article-items">
+                <div class="lawyer-certificates">
+                    {% for certificate in employee.certificates.all %}
+                    <img src="{{certificate.image.url}}">
                     {% endfor %}
-                </ul>
-            </div>
+                </div>
 
-            <div class="about-article">
-                <div class="lawyer-article-items">
-                    <div class="lawyer-certificates">
-                        {% for certificate in employee.certificates.all %}
-                            <img src="{{certificate.image.url}}" >
-                       {% endfor %} 
-                    </div>
+                <div class="lawyer-article-text">
+                    <h2>About {{employee.name|title}}</h2>
+                    {{employee.description|safe}}
+                </div>
 
-                    <div class="lawyer-article-text">
-                        <h2>{{employee.name|title}}</h2>
-                        {{employee.description|safe}}
-                    </div>                       
- 
-                    {% if employee.image %}
-                        <div class="lawyer-thumbnail">
-                            <img src="{{employee.image.url}}" >
-                        </div>
-                     {% endif %}
+                {% if employee.image %}
+                <div class="lawyer-thumbnail">
+                    <img src="{{employee.image.url}}">
+                </div>
+                {% endif %}
 
-                    <div class="lawyer-hr-cont">
-                        <hr class="lawyer-hr">
-                    </div>
+                <div class="lawyer-hr-cont">
+                    <hr class="lawyer-hr">
+                </div>
 
-                    <div class="education-admissions">
-                        <div class="education">
-                            <h2><strong>educatıon</strong></h2>
-                            <ul>                                                                                                                  
-                                <li><p>{{employee.faculty}},{{employee.graduated_date}} </p></li>
-                            </ul>
-                        </div>
-                        <div class="admissions">
-                            <h2><strong>practice areas</strong></h2>                                                   
-                            <ul>
-                                {% for area in employee.areas.all %}
-                                    <li><p>{{area.title}}</p></li>
-                                {% endfor %} 
-                            </ul>
-                        </div>
+                <div class="education-admissions">
+                    <div class="education">
+                        <h2><strong>educatıon</strong></h2>
+                        <ul>
+                            <li>
+                                <p>{{employee.faculty}},{{employee.graduated_date}} </p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="lawyer-hr-cont">
-                        <hr class="lawyer-hr">
+                    <div class="admissions">
+                        <h2><strong>practice areas</strong></h2>
+                        <ul>
+                            {% for area in employee.areas.all %}
+                            <li>
+                                <p>{{area.title}}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
+                    <div class="certificates">
+                        <h2><strong>certificates</strong></h2>
+                        <ul>
+                            {% for certificate in employee.certificates.all %}
+                            <li>
+                                <p>{{certificate.title|title}}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="lawyer-hr-cont">
+                    <hr class="lawyer-hr">
                 </div>
             </div>
         </div>
-    </main>
-{% endblock  %}
+    </div>
+</main>
+{% endblock %}

@@ -1,9 +1,5 @@
 {% extends 'partials/base.html' %}
-
 {% load static %}
-
-
-
 {% block body %}
 
 
@@ -22,9 +18,13 @@
     <div class="page-content practiceareas-page-content">
         <div class="practiceareas-aside">
             <ul>
-                <li class="practice-areas-list-title">Practice Areas</li>
+                <li class="practice-areas-list-title ">Practice Areas</li>
                 {% for area in practice_areas %}
-                    <li class="practice-areas-list-item"><a href="{{area.get_absolute_url}}">{{area.title}}</li>
+                    <li class="practice-areas-list-item {% if request.path == area.get_absolute_url %} active {% endif %} ">
+                        <a href="{{area.get_absolute_url}}">
+                            {{area.title}}
+                        </a>
+                    </li>
                 {% endfor %}
 
             </ul>

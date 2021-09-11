@@ -1,14 +1,10 @@
 {% extends 'partials/base.html' %}
-
 {% load static %}
-
-
-
 {% block body %}
 
 {% include 'partials/messages.html' %}
 
-<div id="main-page-container">
+<div id="main-page-container" >
 
     <div id="main-page-overlay">
 
@@ -24,7 +20,7 @@
             <p class="desc-normal">strategies</p>
             <p class="desc-link">
                 <br>
-                <a href="">learn more</a>
+                <a href="{% url 'main:aboutus' %}">learn more</a>
             </p>
         </div>
     </div>
@@ -34,53 +30,18 @@
 
     <div id="page-content">
         <div id="certificates">
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/NJ-Super-Lawyers.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/tbls1-laborandemploymentlaw.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/Screen+Shot+2014-12-30+at+11.46.31+AM.png' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/TxBarCollegeLogo_png.png' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/85015509-cf5f-45e1-ab62-8d1d69162283.png' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/tx_dallas_employment-lawyers_2021.jpg' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/Screen+Shot+2021-02-24+at+2.05.38+PM.png' %}" alt="">
-                    
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/images.png' %}" alt="">
-                </a>
-            </div>
-            <div class="certificate">
-                <a href="">
-                    <img src="{% static 'img/Screen+Shot+2021-02-24+at+2.05.26+PM.png' %}" alt="">
-                    
-                </a>
-            </div>
+            
+        {% for settings in context_settings %}
+            {% for certificate in settings.certificates.all %}
+                <div class="certificate">
+                    <a href="">
+                        <img src="{{certificate.image.url}}" alt="">
+                    </a>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+
         </div>
 
 
@@ -119,12 +80,12 @@
 
                 <h2>
 
-                    <a href="">hakkımızda</a>
+                    <a href="{% url 'main:aboutus' %}">hakkımızda</a>
 
                 </h2>
 
                 <p>Geçmişimiz, yöntemlerimiz ve problem çözme <br> yaklaşımımız hakkında bilgi edinin.</p>
-                <p><a href="">Daha Fazla Bilgi Edinin →</a></p>
+                <p><a href="{% url 'main:aboutus' %}">Daha Fazla  →</a></p>
 
             </div>
 
@@ -136,13 +97,13 @@
 
                 <h2>
 
-                    <a href="">bizimle konuşun</a>
+                    <a href="{% url 'main:contact' %}">bizimle konuşun</a>
 
                 </h2>
 
                 <p>Danışmanlığınızı bugün çevrimiçi olarak planlayın. <br> Bir geri arama beklemenize veya uygun
                     tarihleri öğrenmenize gerek yoktur.</p>
-                <p><a href="">Şimdi Planla →</a></p>
+                <p><a href="{% url 'main:contact' %}">Şimdi Planla →</a></p>
 
             </div>
 

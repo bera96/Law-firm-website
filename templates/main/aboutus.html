@@ -1,45 +1,46 @@
 {% extends 'partials/base.html' %}
-
 {% load static %}
-
-
-
+{% url 'main:aboutus' as aboutus%}
 {% block body %}
 
-    <div id="about-container">
-        <div id="about-overlay">
-            {% include 'partials/header.html' %}
-            <div id="description-wrapper">
-                <p class="desc-bold"><strong>HAKKIMIZDA</strong></p>
-            </div>
+<div id="about-container">
+    <div id="about-overlay">
+        {% include 'partials/header.html' %}
+        <div id="description-wrapper">
+            <p class="desc-bold"><strong>Büro</strong></p>
         </div>
     </div>
+</div>
 
-    <main id="page">
-        <div class="page content about-page-content">
-            <div class="about-aside">
-                <ul>
-                    <li class="about-aside-list-title"> Hakkımızda</li>
-                    <li class="about-aside-list-item "><a class="active" href="#">Büro</a></li>
-                    {% for employee in employees  %}
-                        <li class="about-aside-list-item"><a href="{{employee.get_absolute_url}}">{{employee.name|title}}<br></a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="about-article">
-                    {% for settings in  context_settings %}
-                    {{settings.about|safe}}
-                    {% endfor %}
-            </div>
+<main id="page">
+    <div class="page content about-page-content">
+        <div class="about-aside">
+            <ul>
+                <li class="about-aside-list-title"> Hakkımızda</li>
+                <li class="about-aside-list-item {% if request.path == aboutus %} active {% endif %}"><a href="{% url 'main:aboutus' %}">Büro</a></li>
+                {% for employee in employees %}
+                    <li class="about-aside-list-item {% if request.path == employee.get_absolute_url %} active {% endif %} ">
+                        <a href="{{employee.get_absolute_url}}">
+                            {{employee.name|add:" "|add:employee.surname|title}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-    </main>
+        <div class="about-article">
+            {% for settings in context_settings %}
+            {{settings.about|safe}}
+            {% endfor %}
+        </div>
+    </div>
+</main>
 
 
 
-        
-    
-        
-    
-   
+
+
+
+
+
 
 {% endblock %}

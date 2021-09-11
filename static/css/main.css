@@ -1,6 +1,5 @@
 /* Global Css */
 
-
 *{
     margin: 0;
     padding: 0;
@@ -437,13 +436,13 @@ footer{
 
  #about-container{
     width: 100%;
-    height: 36rem;
+    height: 30rem;
     background: url(../img/about-overlay.jpeg) no-repeat;
     background-size: cover;
  }
  #about-overlay{
     width: 100%;
-    height: 36rem;
+    height: 30rem;
     background-color: rgba(0, 0, 0, 0.3);
  }
  .about-page-content{
@@ -569,6 +568,7 @@ footer{
 }
 .lawyer-certificates{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .lawyer-certificates img{
@@ -888,6 +888,18 @@ footer{
 /* Blog Details End */
 
 /* Contact Us Start */
+
+#contactus-container{
+    width: 100%;
+    height: 30rem;
+    background: url(../img/contactus.jpeg) no-repeat;
+    background-size: cover;
+}
+#contactus-overlay{
+    width: 100%;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 .contact-us-wrapper{
     background-color: #fff;
