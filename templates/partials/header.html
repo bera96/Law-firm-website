@@ -43,4 +43,46 @@
         </div>
     </div>
 
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+
+        <ul>
+         <li><a href="{% url 'main:home' %}">anasayfa</a></li>
+         <li><a href="{% url 'main:faqs' %}">S.S.S</a></li>
+         <ul class="inner-ul">
+            <i class="fas fa-plus plus-btn"></i>
+           hakkımızda
+           
+             <div class="hide">
+             <li><a href="{% url 'main:aboutus' %}">biz kimiz ?</a></li>
+             <li><a href="">büro</a></li>
+             <li><a href="">asdsadada</a></li>
+             <li><a href="">asdsadsada</a></li>
+             <li><a href="">asdsadasda</a></li>
+            </div>
+         </ul>
+         <li>danışma</li>
+         <ul class="inner-ul">
+            <i class="fas fa-plus plus-btn"></i>
+           
+             faaliyet alanları
+             <div class="hide">
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+             <li><a href="">asdsadasda</a></li>
+            </div>
+            
+         </ul>
+         
+        </ul>
+
+    </div>
+    <span class="bar" style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">☰</span>
+
 </header>

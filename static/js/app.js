@@ -39,16 +39,16 @@ btnTop.addEventListener("click",function(){
 
 
 
-//Share 
-share.addEventListener("click",function(){
+// //Share 
+// share.addEventListener("click",function(){
 
-    links.classList.toggle("show-share")
+//     links.classList.toggle("show-share")
 
-})
+// })
 
 
-//update link number 
-likeBtn.addEventListener("click", updateNumberLink)
+// //update link number 
+// likeBtn.addEventListener("click", updateNumberLink)
 
 
 //get cookie
@@ -117,6 +117,75 @@ function updateNumberLink() {
 
 
 //Ajax for Practice Areas
+
+//slide nav-bar
+
+
+
+function openNav(){
+    document.getElementById("mySidenav").style.width="250px";
+    document.getElementById("main-page-container").style.marginLeft="250px"
+
+   
+    
+    
+}
+
+function closeNav(){
+    document.getElementById("mySidenav").style.width="0px"
+    document.getElementById("main-page-container").style.marginLeft="0px"
+
+}
+
+
+
+
+
+
+const innerUl=document.querySelectorAll(".inner-ul")
+const plusBtns=document.querySelectorAll(".plus-btn")
+
+
+
+
+
+innerUl.forEach((inner)=>{
+
+
+
+
+    
+    inner.addEventListener("click",()=>{
+        showHidelist= inner.firstElementChild.nextElementSibling
+        plusBtn=inner.firstElementChild
+        plusBtn.classList.toggle("rotate")
+        showHidelist.classList.toggle("show")
+        
+     
+   
+        
+    })
+
+
+})
+const siteHeader=document.querySelector("#site-header")
+const mainPage=document.querySelector("#main-page-container")
+
+window.addEventListener("scroll",()=>{
+    const scrollHeight=window.pageYOffset;
+    const pageHeight=mainPage.getBoundingClientRect().height
+  
+    
+   
+    
+    if (scrollHeight>=pageHeight){
+        document.getElementById("mySidenav").style.width="0px"
+        document.getElementById("main-page-container").style.marginLeft="0px"
+    }
+    
+
+
+})
 
 
 

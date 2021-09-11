@@ -22,7 +22,7 @@ btnTop.addEventListener("click",function(){
 
 
 
-//Share 
+Share 
 share.addEventListener("click",function(){
 
     links.classList.toggle("show-share")
@@ -106,6 +106,71 @@ const items = document.getElementsByClassName("practice-areas-list-item");
 console.log(items);
 
 console.log("lşkfsdddddddddddddddddş")
+
+function openNav(){
+    document.getElementById("mySidenav").style.width="250px";
+    document.getElementById("main-page-container").style.marginLeft="250px"
+
+   
+    
+    
+}
+
+function closeNav(){
+    document.getElementById("mySidenav").style.width="0px"
+    document.getElementById("main-page-container").style.marginLeft="0px"
+
+}
+
+
+
+
+
+
+const innerUl=document.querySelectorAll(".inner-ul")
+const plusBtns=document.querySelectorAll(".plus-btn")
+
+
+
+
+
+innerUl.forEach((inner)=>{
+
+
+
+
+    
+    inner.addEventListener("click",()=>{
+        showHidelist= inner.firstElementChild.nextElementSibling
+        plusBtn=inner.firstElementChild
+        plusBtn.classList.toggle("rotate")
+        showHidelist.classList.toggle("show")
+        
+     
+   
+        
+    })
+
+
+})
+const siteHeader=document.querySelector("#site-header")
+const mainPage=document.querySelector("#main-page-container")
+
+window.addEventListener("scroll",()=>{
+    const scrollHeight=window.pageYOffset;
+    const pageHeight=mainPage.getBoundingClientRect().height
+  
+    
+   
+    
+    if (scrollHeight>=pageHeight){
+        document.getElementById("mySidenav").style.width="0px"
+        document.getElementById("main-page-container").style.marginLeft="0px"
+    }
+    
+
+
+})
 
 
 

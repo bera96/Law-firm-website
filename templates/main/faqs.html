@@ -27,7 +27,7 @@
                     <div class="column-left">
                         {% for faq_odd in faqs_odd %}
                         <div class="column-left-item">
-                            <b>{{ faq_odd.title}}</b>
+                            <h1>{{ faq_odd.title}}</h1>
                             {{faq_odd.desc|safe}}
                         </div>
                         {% endfor %}
@@ -36,7 +36,7 @@
                     <div class="column-right">
                             {% for faq_even in faqs_even %}
                             <div class="column-right-item">
-                                <b>{{ faq_even.title}}</b>
+                                <h1>{{ faq_even.title}}</h1>
                             {{faq_even.desc|safe}}
                             </div>
                             {% endfor %}

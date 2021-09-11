@@ -26,7 +26,7 @@ class Message(models.Model):
 
 class Faqs(models.Model):
     title = UpperCaseField(max_length = 255)
-    desc = RichTextField(verbose_name="Desciption")
+    desc = RichTextField(verbose_name="Description")
 
 
 
