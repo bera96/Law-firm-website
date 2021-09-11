@@ -1,9 +1,6 @@
-from website.settings import API_KEY
 from django.db import models
 from ckeditor.fields import RichTextField
 from employee.models import UpperCaseField, Certificate
-from website.settings import API_KEY
-import requests
 
 
 
@@ -48,7 +45,7 @@ class GeneralSettings(models.Model):
     number=models.CharField(max_length=120, verbose_name="Telefon")
     address=models.CharField(max_length=255, verbose_name="Adres")
     email = models.EmailField(max_length=254, default=None, verbose_name="Email")
-    certificates = models.ManyToManyField(Certificate,  verbose_name="Office's Certificates",null=True, blank=True)
+    certificates = models.ManyToManyField(Certificate,  verbose_name="Office's Certificates", blank=True)
     about = RichTextField(verbose_name="AboutUs")
 
 
@@ -61,12 +58,7 @@ class GeneralSettings(models.Model):
 
 
 
-    def get_location_coordinates(self):
-        url = f'https://maps.googleapis.com/maps/api/geocode/json?address={self.address}&key={API_KEY}'
-        response = requests.get(url)
-        resp_json_payload = response.json()
-        return resp_json_payload['status']
-    
+
 
 
     

@@ -1,8 +1,12 @@
 {% load static %}
 
- <header id="site-header">
+<header id="site-header">
     <div id="site-logo">
-        <img src="{% static 'img/logo.png'%}" alt="">
+        {% for settings in context_settings %}
+            {% if settings.logo %}
+                <img src="{{settings.logo.url}}" alt="">
+            {% endif %}
+        {% endfor %}
     </div>
     <div id="site-list-container">
         <div class="site-list-item">
@@ -11,28 +15,31 @@
         <div class="site-list-item">
             <a href="{% url 'main:faqs' %}">S.S.S</a>
         </div>
-         <div class="site-list-item about-dropdwn">
+        <div class="site-list-item about-dropdwn">
             <a href="{% url 'main:aboutus' %}">HAKKIMIZDA
                 <ul>
-                    <a href={% url 'main:aboutus' %}><li>Büro</li></a>
+                    <li>
+                        <a href="{% url 'main:aboutus' %}">Büro</a>
+                    </li>
+
                     {% for employee in context_employees %}
-                        <a href="{{employee.get_absolute_url}}"></a><li>{{employee.name|title}}</li><br></a>
+                    <li>
+                        <a href="{{employee.get_absolute_url}}"> {{employee.name|add:" "|add:employee.surname|title}}</a>
+                    </li>
                     {% endfor %}
+
                 </ul>
             </a>
-            
-        </div>
-        <div class="site-list-item">
-            <a href="">DANIŞMA</a>
         </div>
         <div class="site-list-item about-dropdwn">
             <a href="">FAALİYET ALANLARI
                 <ul>
                     {% for area in context_practice_areas %}
-                        <a href="{{area.get_absolute_url}}"><li>{{area.title|title}}</li><br></a>
+                        <li>
+                            <a href="{{area.get_absolute_url}}">{{area.title|title}}</a>
+                        </li>
                     {% endfor %}
                 </ul>
-            
             </a>
         </div>
         <div class="site-list-item">

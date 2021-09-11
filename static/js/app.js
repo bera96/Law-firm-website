@@ -11,20 +11,7 @@ const links=document.querySelector(".share-toggle")
 
 
 
-const items = document.querySelectorAll(".practice-areas-list-item");
-items.forEach(function(item) {
 
-    item.addEventListener('click', ()=>{
-        let path = window.location.href;
-        let link = item.getAttribute('href')
-        
-        
-        console.log(path)
-        console.log(item.baseURI)
-
-    })
-    
-})
 
 
 // Scroll To Top
@@ -116,7 +103,7 @@ function updateNumberLink() {
 
 
 
-//Ajax for Practice Areas
+
 
 //slide nav-bar
 
