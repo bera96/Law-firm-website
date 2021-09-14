@@ -107,11 +107,27 @@ function updateNumberLink() {
 
 //slide nav-bar
 
+var tablet=window.matchMedia("(max-width:768px)")
+var mobile=window.matchMedia("(max-width:480px)")
+
+
 
 
 function openNav(){
-    document.getElementById("mySidenav").style.width="250px";
-    document.getElementById("main-page-container").style.marginLeft="250px"
+    if(tablet.matches){
+        document.getElementById("mySidenav").style.width="250px";
+        document.body.style.marginLeft="250px"
+        document.body.style.height="100%"
+        document.body.style.overflow="hidden"
+    }
+    if(mobile.matches){
+        document.getElementById("mySidenav").style.width="150px";
+        document.body.style.marginLeft="150px"
+        document.body.style.height="100%"
+        document.body.style.overflow="hidden"
+    }
+    
+    // window.onscroll = function () { window.scrollTo(0, 0); };
 
    
     
@@ -120,7 +136,10 @@ function openNav(){
 
 function closeNav(){
     document.getElementById("mySidenav").style.width="0px"
-    document.getElementById("main-page-container").style.marginLeft="0px"
+    document.body.style.marginLeft="0px"
+    document.body.style.height=""
+    document.body.style.overflow=""
+   
 
 }
 
@@ -156,7 +175,7 @@ innerUl.forEach((inner)=>{
 
 })
 const siteHeader=document.querySelector("#site-header")
-const mainPage=document.querySelector("#main-page-container")
+const mainPage=document.querySelector(".slide-container")
 
 window.addEventListener("scroll",()=>{
     const scrollHeight=window.pageYOffset;
@@ -167,13 +186,18 @@ window.addEventListener("scroll",()=>{
     
     if (scrollHeight>=pageHeight){
         document.getElementById("mySidenav").style.width="0px"
-        document.getElementById("main-page-container").style.marginLeft="0px"
+        document.body.style.marginLeft="0px"
     }
     
 
 
 })
 
+const container=document.querySelector("#container")
+
+window.addEventListener("load",()=>{
+    container.classList.add("hide-preloader")
+})
 
 
 

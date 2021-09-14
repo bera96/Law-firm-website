@@ -7,6 +7,9 @@
   
     
 }
+body{
+    transition: .5s;
+}
 
 ::selection{
     background-color: black;
@@ -18,6 +21,26 @@ ol,ul {
 a{
     text-decoration: none !important;
 }
+#container{
+    z-index: 999;
+    background-color: black;
+    transition: all .3s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.hide-preloader{
+    
+    z-index: -999 !important;
+    transition: all .5s linear;
+    background: none !important;
+    
+    
+}
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -62,8 +85,7 @@ a{
         height: 60rem;
         background: url(../img/image.jpg) no-repeat;
         background-size: cover;
-
-       
+      
         
     }
     
@@ -949,6 +971,7 @@ a{
         padding-top: 5rem;
         background-color: #e4e5e9;
         padding-bottom: 6rem;
+        
     }
     .contact-uscontainer h1{
         color: #313131;
@@ -1077,6 +1100,7 @@ a{
         margin-top: 0.4rem   ;
     }
     
+    
     .practice-areas-list-item a{
         text-transform: uppercase;
         
@@ -1128,7 +1152,9 @@ a{
    
 }
 @media(min-width:481px) and (max-width:768px){
-    
+    .slide-container{
+        transition:margin-left .5s;
+    }
     .btntop {
         font-size: 1.25rem;
         position: fixed;
@@ -2187,6 +2213,9 @@ a{
         background: url(../img/practice-areas.jpeg) no-repeat;
         background-size: cover;
     }
+    .practiceares-wrapper {
+      margin-top: 2rem !important;
+    }
     #practiceareas-overlay{
         width: 100%;
         height: 36rem;
@@ -2221,11 +2250,14 @@ a{
         color: rgb(26, 26, 26)
      }
     .practiceareas-page-content{
-        margin-bottom: 6rem;
+        width: 90%;
+        margin-bottom: 3rem;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
     }
     .practiceareas-article{
-        padding-left: 8rem;
+        padding-left: 2rem;
     }
     .practiceareas-article h2{
         color: rgb(74, 74, 74);
@@ -2269,7 +2301,7 @@ a{
     color: white;
 }
 .sidenav{
-    height: 60rem;
+    bottom: 0;
     width: 0;
     position: absolute;
     z-index: 1;
